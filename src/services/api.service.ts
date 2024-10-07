@@ -99,10 +99,11 @@ export class ApiService {
     data.append('report_date', report_date);
     data.append('project_data', JSON.stringify(project_data));
 
+    console.log(data);
+
     return new Promise((resolve, reject) => {
       post(getBaseRoute(Constants.kReferenceReports), data)
         .then((response) => {
-          console.log("Response", response)
           const result = response.data;
           resolve(result);
         })

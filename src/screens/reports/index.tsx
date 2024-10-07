@@ -32,8 +32,13 @@ interface Props {
   navigation: any;
 }
 
+const getCurrentDateTime = () => {
+  const now = new Date();
+  return now.toISOString();
+};
+
 const Reports = ({ navigation }: Props) => {
-  const [selectedDate, setSelectedDate] = useState('');
+  const [selectedDate, setSelectedDate] = useState(getCurrentDateTime());
   const [openedCalendar, setOpenedCalendar] = useState(false);
   const dispatch = useDispatch();
   const { project, reports } = useSelector((state: RootState) => state.user);
@@ -90,6 +95,7 @@ const Reports = ({ navigation }: Props) => {
   };
 
   const onDateChange = (date: any) => {
+    console.log('selected date', date)
     setSelectedDate(date);
   };
 
@@ -115,6 +121,7 @@ const Reports = ({ navigation }: Props) => {
                   color: '#000',
                 }}
                 selectedDayTextColor='#FFFFFF'
+                selectedStartDate={selectedDate}
                 onDateChange={onDateChange}
               />
               <FadeAnimation style={{ alignSelf: 'center', margin: dimensions.size.large, zIndex: 1 }}>
