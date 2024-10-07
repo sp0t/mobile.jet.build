@@ -35,8 +35,14 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>This app uses the camera to upload photos.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>App requesting face id usage</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Jet needs access to your photo library to allow you to select and upload photos for your project reports. The photos will only be used in your report and will not be shared without your permission.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Inter-Black.otf</string>
@@ -77,11 +83,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSCameraUsageDescription</key>
-	<string>This app uses the camera to upload photos.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This app uses your photo library to upload photos.</string>
-	<key>NSFaceIDUsageDescription</key>
-	<string>App requesting face id usage</string>
+	<key>CFBundleIconName</key>
+	<string>AppIcon</string>
 </dict>
 </plist>
